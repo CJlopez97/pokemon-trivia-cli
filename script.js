@@ -15,8 +15,8 @@ const questions = [
   },
   {
     question: "How many forms does Deoxys have?",
-    options: ["2", "3", "4", "5"],
-    answer: 2
+    options: ["Three", "Two", "Five", "Four"],
+    answer: 3
   },
   {
     question: "Which Pokémon has the unique ability called Wonder Guard?",
@@ -119,9 +119,10 @@ function currentQuestion(){
     console.log(currentQ.question);
     //Options
 
-    currentQ.options.forEach((option, index) =>{
-        console.log(`${index + 1}. ${option}`);
+    const optionsDisplay = currentQ.options.map((option, index) =>{
+        return (`${index + 1}. ${option}`);
     });
+    console.log(optionsDisplay.join("\n"));
     console.log("");
     startTimer();
 
